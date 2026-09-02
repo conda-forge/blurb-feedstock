@@ -17,7 +17,7 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - {{ entrypoint }} = {{ import }}.{{ import }}:main
+    - {{ entrypoint }} = {{ import }}._cli:main
 
 requirements:
   host:
@@ -34,13 +34,12 @@ test:
     - pip
   imports:
     - {{ import }}
-    - {{ import }}.{{ import }}
   commands:
     - pip check
     - {{ entrypoint }} --help
     - {{ entrypoint }} --version
-    - {{ entrypoint }} help add
-    - {{ entrypoint }} help merge
+    - {{ entrypoint }} add --help
+    - {{ entrypoint }} merge --help
 
 about:
   home: https://github.com/python/blurb
