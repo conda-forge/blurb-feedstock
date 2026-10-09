@@ -1,8 +1,8 @@
 {% set name = "blurb" %}
 {% set import = "blurb" %}
 {% set entrypoint = "blurb" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "0154689a5aa009174b5e332a6997318e82e1b12b57fce03162ed49ea25c65652" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "9ce54639a3a319e15dc7abbd2974cfa6817c27d9a5ba7d60c0851f53616e8391" %}
 
 package:
   name: {{ name|lower }}
